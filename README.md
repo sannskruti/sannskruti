@@ -5,7 +5,7 @@
 
 - 💬 Ask me about **Javascript,React,Nodejs**
 
-- 📫 How to reach me **sanskrutimanoria@gmail.com**
+- 📫 How to reach me **manoria.s@northeastern.edu**
 
 - ⚡ Fun fact **I do experiments in cooking!**
 
