@@ -2,7 +2,9 @@ import React from "react";
 import "./intro.css";
 import bg from "../../assets/bg.jpg";
 import { Link } from "react-scroll";
-import btnImg from "../../assets/hireMe.png";
+// import btnImg from "../../assets/hireMe.png";
+import btnImg from "../../assets/linked.png";
+
 
 export const Intro = () => {
   return (
@@ -22,10 +24,12 @@ export const Intro = () => {
 
         <Link>
           <button className="btn">
-            <img src={btnImg} alt="Resume" className="btnImg" /> Resume{" "}
+            <img src={btnImg} alt="Resume" className="btnImg" /> LinkedIn
           </button>
         </Link>
       </div>
+      
+
       <img src={bg} alt="" className="bg" />
     </section>
   );

@@ -35,6 +35,9 @@
   background: rgb(50, 50, 50);
   border: solid white;
 }
+.techSkills:hover{
+  box-shadow: 0 0 1rem rgb(238, 237, 237);
+}
 .outside{
   display: flex;
   flex-direction: column;

@@ -36,10 +36,12 @@
   justify-content: center;
   padding: 0 1rem;
   border-radius: 2rem;
-  margin-right: -2rem;
+  margin-right: -1rem;
   cursor: pointer;
 }
-
+.desktopMenuBtn:hover {
+  box-shadow: 0 0 1rem rgb(238, 237, 237);
+}
 
 .desktopMenuImg {
   object-fit: cover;

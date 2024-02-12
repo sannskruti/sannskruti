@@ -9,13 +9,14 @@ import git from "../../assets/git.png";
 import location from "../../assets/red-location-icon-map-png-4.png";
 import connect from "../../assets/connect.gif";
 import { useRef } from "react";
-import emailjs from "@emailjs/browser";
+import emailjs, { send } from "@emailjs/browser";
 
 const Contact = () => {
   const form = useRef();
-  const sendEmail = (e) => {
+  const sendEmail = async (e) => {
     e.preventDefault();
-    emailjs
+    console.log("submitted!");
+    await emailjs
       .sendForm(
         "service_dasy7qe",
         "template_awnpmxu",
@@ -41,7 +42,7 @@ const Contact = () => {
           <div className="company">
             <div className="group-image-location">
               <div>
-                {/* image */}
+                
                 <img
                   src={capgemini}
                   alt="client"
@@ -57,21 +58,12 @@ const Contact = () => {
             <div className="group-image-location">
               <div className="position">Software Engineer</div>
               <div>
-                <ul>
-                  <li>
-                    Developed full-stack applications for financial services
-                    managing 500+ concurrent users with a 1.4s average page load
-                    time.
-                  </li>
-                  <li>
-                    Implemented business functionaliyties like versioning in data
-                    forms and Object Locking (preventing simultaneous edits)
-                    using MERN Stack, resulting in a 15% reduction in data
-                    errors and a 25% increase in accuracy.
-                  </li>
-                  <li>
-                    Orchestrated CI/CD pipelines on Azure DevOps which increased
-                    deployment frequency and reduced release cycle time.
+                <ul class="company-matter">
+                <li>
+                    Implemented business functionaliyties like versioning in
+                    data forms and Object Locking (preventing simultaneous
+                    edits) using MERN Stack, resulting in a 15% reduction in
+                    data errors and a 25% increase in accuracy.
                   </li>
                   <li>
                     Collaborated and set effective communication with clients in
@@ -79,6 +71,17 @@ const Contact = () => {
                     and training sessions for internal teams, enhancing skills
                     for improved project execution.
                   </li>
+                  <li>
+                    Developed full-stack applications for financial services
+                    managing 500+ concurrent users with a 1.4s average page load
+                    time.
+                  </li>
+                  
+                  <li>
+                    Orchestrated CI/CD pipelines on Azure DevOps which increased
+                    deployment frequency and reduced release cycle time.
+                  </li>
+                  
                 </ul>
               </div>
             </div>
@@ -103,17 +106,18 @@ const Contact = () => {
             <div className="group-image-location">
               <div className="position">Product Engineering Senior Analyst</div>
               <div>
-                <ul>
+                <ul class="company-matter">
+                <li>
+                    Analyzed real-time streaming data received from GCP and
+                    generated meaningful graphical analytics for performance
+                    monitoring, improving container cleaning efficiency by 25%.
+                  </li>
                   <li>
                     Crafted apps to oversee 500K-1M document-data queues,
                     decreasing load time from 35s to 7s and bundle size from 2Mb
                     to 300Kb.
                   </li>
-                  <li>
-                    Analyzed real-time streaming data received from GCP and
-                    generated meaningful graphical analytics for performance
-                    monitoring, improving container cleaning efficiency by 25%.
-                  </li>
+                  
                   <li>
                     Revamped UI components by translating Figma designs into
                     HTML and CSS/SCSS and built interactive elements using
@@ -144,17 +148,15 @@ const Contact = () => {
             <div className="group-image-location">
               <div className="position">Senior Systems Engineer</div>
               <div>
-                <ul>
-                  <li>
-                    Worked on .NET framework applications using C# and MS SQL
-                    server for the backend and Angular 6 for the front end.
-                  </li>
+                <ul class="company-matter">
+                 
                   <li>
                     Expedited the testing of REST APIs using Postman (Automation
                     Testing), minimizing the testing time by 80%, and worked on
                     troubleshooting production bugs, code reviews, and unit
                     tests with Mendix applications.
                   </li>
+                  
                   <li>
                     Streamlined collaborative development projects by
                     implementing Git version control, resulting in a 45%
@@ -163,6 +165,10 @@ const Contact = () => {
                   <li>
                     Promoted to Senior Systems Engineer from Systems Engineer
                     and Trainee Engineer respectively.
+                  </li>
+                  <li>
+                    Worked on .NET framework applications using C# and MS SQL
+                    server for the backend and Angular 6 for the front end.
                   </li>
                 </ul>
               </div>
@@ -189,9 +195,12 @@ const Contact = () => {
               height="150"
               className="coding-girl"
             />
+            <h3> sanskrutimanoria@gmail.com</h3>
+            <h4> or</h4>
+            <h4> drop your message here!</h4>
           </div>
         </span>
-        <form className="contactForm" ref={form} onSubmit={sendEmail}>
+        <form className="contactForm" ref={form}>
           <input
             type="text"
             className="name"
@@ -210,7 +219,14 @@ const Contact = () => {
             rows={5}
             placeholder="Your Message"
           ></textarea>
-          <button type="submit" value="Send" className="submitBtn">
+          <button
+            type="submit"
+            value="Send"
+            className="submitBtn"
+            onClick={(e) => {
+              sendEmail(e);
+            }}
+          >
             Submit
           </button>
           <div className="links">
@@ -225,6 +241,17 @@ const Contact = () => {
             </a>
           </div>
         </form>
+        {/* <div className="links">
+            <a href="https://www.linkedin.com/in/sanskruti-manoria/">
+              <img src={linkedin} alt="linkedIn" className="link" />
+            </a>
+            <a href="https://github.com/sannskruti">
+              <img src={git} alt="github" className="link" />
+            </a>
+            <a href="https://www.instagram.com/sanskrrutii/">
+              <img src={insta} alt="insta" className="link" />
+            </a>
+          </div> */}
       </div>
     </section>
   );

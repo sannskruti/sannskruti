@@ -8,6 +8,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 2rem;
 }
 .contactPageTitle {
   font-size: 3rem;
@@ -82,6 +83,7 @@
 .links {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 .link {
   object-fit: cover;
@@ -89,6 +91,9 @@
   width: 3rem;
   margin: 0 0.75rem;
   border-radius: 40px;
+}
+.link:hover {
+  box-shadow: 0 0 1rem rgb(238, 237, 237);
 }
 
 .company {
@@ -103,7 +108,8 @@
   justify-content: space-between;
 }
 .company:hover {
-  background-color: rgba(44, 88, 209, 0.536);
+  box-shadow: 0 0 1rem rgb(238, 237, 237);
+  background-color: rgba(14, 52, 124, 0.714);
 }
 .company-item-list {
   margin: 1rem;
@@ -132,4 +138,10 @@
 }
 .testimonial {
   width: 69.7vw;
+}
+.company-matter {
+  text-align: left;
+  font-size: 0.9rem;
+  margin-left: 1rem;
+  margin-top: 1rem;
 }

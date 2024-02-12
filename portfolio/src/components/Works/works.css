@@ -31,23 +31,27 @@
 }
 .workImg1{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   flex-direction: row;
 }
 .workImg2{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   flex-direction: row;
 }
 
 .worksImg {
   object-fit: cover;
   height: 20rem;
-  width: 35rem;
-  margin: 0.5rem;
+  width: 30rem;
+  margin: 2rem;
   border-radius: 1rem;
   border: solid white;
   cursor: pointer;
+}
+.worksImg:hover{
+  box-shadow: 0 0 1rem rgb(238, 237, 237);
+  background-color: rgb(37, 59, 225);
 }
 
 
