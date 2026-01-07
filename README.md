@@ -3,7 +3,7 @@
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=sanskrutii03&label=Profile%20views&color=0e75b6&style=flat" alt="sanskrutii03" /> </p>
 
-- 💬 Ask me about **Java,Javascript,React,Nodejs**
+- 💬 Ask me about **Python,Javascript,React,Nodejs**
 
 - 📫 How to reach me **manoria.s@northeastern.edu**
 
